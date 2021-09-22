@@ -1,8 +1,8 @@
 # interference open cluster example
 
 ##### java-based distributed database platform
-###### (c) 2010 - 2020 head systems, ltd.
-###### current revision: release 2020.3
+###### (c) 2010 - 2021 head systems, ltd.
+###### current revision: release 2021.1
 ###### for detailed information see:
 ###### http://interference.su and doc/InterferenceManual.pdf
 ###### contacts: info@inteference.su
@@ -30,7 +30,7 @@ The iocluster-test application shows example of using the basic
 interference use cases.
 
 To get started with interference, you need to download sources of 
-the current interference release (2020.3), build it and install it 
+the current interference release (2021.1), build it and install it 
 into your local maven repository (mvn install).
 
 Next, create two aplication environments (node1 and node2) and 
@@ -38,17 +38,22 @@ specify the set of VM keys for each application (node1 below):
 
 ```
 -Dsu.interference.config=node1.properties
+-verbose:gc
+-Xloggc:/ioclustergc.log
+-XX:+PrintGCDetails
+-XX:+PrintGCDateStamps
+-XX:+AggressiveOpts
+-Xms1G
+-Xmx4G
+-XX:MaxMetaspaceSize=256m
+-XX:+UseStringDeduplication
+-XX:ParallelGCThreads=4
+-XX:ConcGCThreads=2
+-Dlogback.configurationFile=config/app-log-config.xml
 -Dcom.sun.management.jmxremote 
 -Dcom.sun.management.jmxremote.port=8888
--Dcom.sun.management.jmxremote.local.only=false 
 -Dcom.sun.management.jmxremote.authenticate=false 
 -Dcom.sun.management.jmxremote.ssl=false
--Xms256m
--Xmn512m
--Xmx4g
--XX:MaxMetaspaceSize=256m
--XX:ParallelGCThreads=8
--XX:ConcGCThreads=4
 ```
 See environments settings for both nodes in the /config directory,
 in the node1.config and node2.config files. 

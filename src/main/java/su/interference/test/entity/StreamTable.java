@@ -54,27 +54,27 @@ public class StreamTable {
         this.descript = desc;
     }
 
-    public int getId(Session s) {
+    public int getId() {
         return id;
     }
 
-    public void setId(int id, Session s) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName(Session s) {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name, Session s) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getDescript(Session s) {
+    public String getDescript() {
         return descript;
     }
 
-    public void setDescript(String descript, Session s) {
+    public void setDescript(String descript) {
         this.descript = descript;
     }
 

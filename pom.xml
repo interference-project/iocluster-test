@@ -7,12 +7,12 @@
 
     <groupId>su.interference</groupId>
     <artifactId>iocluster-test</artifactId>
-    <version>2020.2</version>
+    <version>2021.1</version>
     <packaging>jar</packaging>
 
     <name>iocluster-test</name>
     <description>example application for interference opensource cluster</description>
-    <url>https://github.com/interference-project/interference-test</url>
+    <url>https://github.com/interference-project/iocluster-test</url>
 
     <licenses>
         <license>
@@ -78,7 +78,7 @@
         <dependency>
             <groupId>su.interference</groupId>
             <artifactId>interference</artifactId>
-            <version>2020.2</version>
+            <version>2021.1</version>
         </dependency>
 
     </dependencies>

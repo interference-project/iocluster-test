@@ -54,43 +54,43 @@ public class Emp {
 
     }
 
-    public int getEmpId(Session s) {
+    public int getEmpId() {
         return empId;
     }
 
-    public void setEmpId(int empId, Session s) {
+    public void setEmpId(int empId) {
         this.empId = empId;
     }
 
-    public String getEmpName(Session s) {
+    public String getEmpName() {
         return empName;
     }
 
-    public void setEmpName(String empName, Session s) {
+    public void setEmpName(String empName) {
         this.empName = empName;
     }
 
-    public int getDeptId(Session s) {
+    public int getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(int deptId, Session s) {
+    public void setDeptId(int deptId) {
         this.deptId = deptId;
     }
 
-    public String getDescript(Session s) {
+    public String getDescript() {
         return descript;
     }
 
-    public void setDescript(String descript, Session s) {
+    public void setDescript(String descript) {
         this.descript = descript;
     }
 
-    public Date getCreateDate(Session s) {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate, Session s) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 

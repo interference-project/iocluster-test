@@ -48,27 +48,27 @@ public class Dept {
 
     }
 
-    public int getDeptId(Session s) {
+    public int getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(int deptId, Session s) {
+    public void setDeptId(int deptId) {
         this.deptId = deptId;
     }
 
-    public String getDeptName(Session s) {
+    public String getDeptName() {
         return deptName;
     }
 
-    public void setDeptName(String deptName, Session s) {
+    public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
 
-    public String getDescript(Session s) {
+    public String getDescript() {
         return descript;
     }
 
-    public void setDescript(String descript, Session s) {
+    public void setDescript(String descript) {
         this.descript = descript;
     }
 

@@ -25,7 +25,7 @@ package su.interference.test;
 
 import su.interference.core.Instance;
 import su.interference.persistent.Session;
-import su.interference.proxy.GenericResult;
+import su.interference.api.GenericResult;
 import su.interference.sql.ResultSet;
 import su.interference.sql.StreamQueue;
 import su.interference.test.entity.Dept;
@@ -109,13 +109,13 @@ public class InterferenceTest implements InterferenceTestMBean {
             for (int i = 1; i <= 100000; i++) {
                 Dept d = (Dept) session.newEntity(Dept.class, new Object[]{});
                 Emp e = (Emp) session.newEntity(Emp.class, new Object[]{});
-                d.setDeptId(i, session);
-                d.setDeptName("Department "+i, session);
-                d.setDescript("abcdefghijklmn "+i, session);
-                e.setEmpId(i, session);
-                e.setDeptId(i, session);
-                e.setEmpName("John Doe "+i, session);
-                e.setDescript("abcdefghijklmn "+i, session);
+                d.setDeptId(i);
+                d.setDeptName("Department "+i);
+                d.setDescript("abcdefghijklmn "+i);
+                e.setEmpId(i);
+                e.setDeptId(i);
+                e.setEmpName("John Doe "+i);
+                e.setDescript("abcdefghijklmn "+i);
                 session.persist(d);
                 session.persist(e);
             }
@@ -174,7 +174,7 @@ public class InterferenceTest implements InterferenceTestMBean {
         if (session != null) {
             for (int id = 1; id <= 100000; id++) {
                 Dept dept = (Dept) session.find(Dept.class, id);
-                dept.setDeptName("Outdoor staff", session);
+                dept.setDeptName("Outdoor staff");
                 session.persist(dept);
             }
         }
@@ -186,7 +186,7 @@ public class InterferenceTest implements InterferenceTestMBean {
     public void findDepts() throws Exception {
         for (int id = 1; id <= 100000; id++) {
             Dept dept = (Dept) session.find(Dept.class, id);
-            System.out.println(dept.getDeptName(session));
+            System.out.println(dept.getDeptName());
         }
     }
 
@@ -196,7 +196,7 @@ public class InterferenceTest implements InterferenceTestMBean {
     public void findDeptsInAnotherSession() throws Exception {
         for (int id = 1; id <= 100000; id++) {
             Dept dept = (Dept) session2.find(Dept.class, id);
-            System.out.println(dept.getDeptName(session2));
+            System.out.println(dept.getDeptName());
         }
     }
 
